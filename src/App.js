@@ -2,6 +2,7 @@ import "./App.css";
 import { Switch, Route, NavLink } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { TodoApp } from "./Components/NotesApp/TodoApp";
+import Bookmark from "./Components/bookmark/bookmark"
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
         <Route path="/NotesApp">
           <TodoApp />
         </Route>
-        <Route path="/Bookmarks">Bro</Route>
+        <Route path="/Bookmarks"><Bookmark /></Route>
         <Route path="/Remainder">How</Route>
         <Route path="/WebsiteBlocker">Are</Route>
       </Switch>
