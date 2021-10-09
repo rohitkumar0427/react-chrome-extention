@@ -1,15 +1,10 @@
-import { TodoBoxTitle } from "./TodoBoxTitle";
 import {
-  Card,
-  CardContent,
   Button,
   Modal,
-  Typography,
-  TextField,
   List,
   ListItem,
-  ListItemButton,
   ListItemText,
+  Typography,
 } from "@mui/material";
 import { useState } from "react";
 import { Box } from "@mui/system";
@@ -23,7 +18,7 @@ const style = {
   //width: 400,
   bgcolor: "background.paper",
   border: "2px solid #000",
-  color: "#fff",
+  // color: "#fff",
   boxShadow: 24,
   p: 4,
 };
@@ -51,12 +46,20 @@ export function ArchivedTodos({ items, getTodos }) {
 
   return (
     <>
-      <Button onClick={handleOpen}>Archived Todos</Button>
+      <Button
+        variant="contained"
+        style={{ width: "100%" }}
+        color="secondary"
+        onClick={handleOpen}
+        disabled={items.length === 0 ? true : false}
+      >
+        Archived Todo
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        // aria-labelledby="modal-modal-title"
+        // aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
           <List>
@@ -70,7 +73,7 @@ export function ArchivedTodos({ items, getTodos }) {
               items.map((item) => {
                 return (
                   <ListItem disablePadding>
-                    <ListItemText primary={item.title} />
+                    <Typography>{item.title}</Typography>
                     <Button onClick={() => handleTodo(item)}>
                       Move to Todo
                     </Button>

@@ -3,29 +3,120 @@
     {
       "id": 1,
       "title": "Learn Js",
-      "status": "doing",
+      "status": "archived",
       "doing": "",
       "done": ""
     },
     {
       "id": 2,
       "title": "Learn HTML",
-      "status": "doing"
+      "status": "archived"
     },
     {
       "id": 3,
       "title": "Learn CSS",
-      "status": "done"
+      "status": "archived"
     },
     {
       "id": 4,
       "title": "Learn React",
-      "status": "todo"
+      "status": "archived"
     },
     {
       "title": "Learn Redux",
-      "status": "todo",
+      "status": "archived",
       "id": 5
+    },
+    {
+      "title": "Learn CS",
+      "status": "archived",
+      "id": 7
+    },
+    {
+      "title": "Learn HTML",
+      "status": "todo",
+      "work": "",
+      "id": 8
+    },
+    {
+      "title": "Learn CSS",
+      "status": "archived",
+      "work": "",
+      "id": 9
+    },
+    {
+      "title": "Learn JS",
+      "status": "archived",
+      "work": "",
+      "id": 10
+    },
+    {
+      "title": "Gardening",
+      "status": "todo",
+      "work": "Personal",
+      "id": 11
+    },
+    {
+      "title": "Cleaning",
+      "status": "done",
+      "work": "Personal",
+      "id": 12
+    },
+    {
+      "title": "Work on youtube video",
+      "status": "todo",
+      "work": "Personal",
+      "id": 13
+    },
+    {
+      "title": "Meet Steve",
+      "status": "doing",
+      "work": "Others",
+      "id": 14
+    },
+    {
+      "title": "Read Book",
+      "status": "archived",
+      "work": "Others",
+      "id": 15
+    },
+    {
+      "title": "sdbdrf",
+      "status": "archived",
+      "work": "Office",
+      "id": 16
+    },
+    {
+      "title": "dfbdfhbd",
+      "status": "todo",
+      "work": "Office",
+      "id": 17
+    },
+    {
+      "title": "asvgsdbdfn gf",
+      "status": "todo",
+      "work": "svsad",
+      "id": 18
+    },
+    {
+      "title": "asvdgsgd",
+      "status": "archived",
+      "work": "svsad",
+      "id": 19
+    }
+  ],
+  "workspace": [
+    {
+      "title": "Personal",
+      "id": 17
+    },
+    {
+      "title": "Office",
+      "id": 2
+    },
+    {
+      "title": "Others",
+      "id": 3
     }
   ]
 }

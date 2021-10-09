@@ -1,31 +1,52 @@
-import { Button, Card, Drawer, Grid, Paper } from "@mui/material";
+import {
+  Card,
+  Grid,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Paper,
+} from "@mui/material";
 import axios from "axios";
 import { useEffect, useState, Fragment } from "react";
 import "./TodoApp.css";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { TodoListBox } from "./TodoListBox";
+import { CreateProject } from "./CreateProject";
 import { DragDropContext } from "react-beautiful-dnd";
-import { ArchivedTodos } from "./ArchivedTodos";
+import { ProjectDelete } from "./ProjectDelete";
 
 const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
+  //   ...theme.typography.body2,
   textAlign: "center",
-  color: theme.palette.text.secondary,
+  //   color: theme.palette.text.secondary,
   height: 60,
   lineHeight: "60px",
 }));
 
-const darkTheme = createTheme({ palette: { mode: "dark" } });
 
 export function TodoApp() {
   const [data, setData] = useState([]);
+  const [workspace, setWorkspace] = useState([]);
+  const [work, setWork] = useState("");
 
   const getTodos = () => {
     axios
       .get("http://localhost:3000/todos")
       .then(({ data }) => {
         setData(data);
+      })
+      .catch((e) => console.log(e));
+
+    axios
+      .get("http://localhost:3000/workspace")
+      .then(({ data }) => {
         console.log(data);
+        let values = [];
+        for (let i = 0; i < data.length; i++) {
+          values.push(data[i].title);
+        }
+        setWorkspace(data);
       })
       .catch((e) => console.log(e));
   };
@@ -34,10 +55,11 @@ export function TodoApp() {
     getTodos();
   }, []);
 
-  const todo = data.filter((item) => item.status === "todo");
-  const doing = data.filter((item) => item.status === "doing");
-  const done = data.filter((item) => item.status === "done");
-  const archived = data.filter((item) => item.status === "archived");
+  const values = data.filter((item) => item.work === work);
+  const todo = values.filter((item) => item.status === "todo");
+  const doing = values.filter((item) => item.status === "doing");
+  const done = values.filter((item) => item.status === "done");
+  const archived = values.filter((item) => item.status === "archived");
 
   const move = (source, destination, droppableSource, droppableDestination) => {
     const sourceClone = Array.from(source);
@@ -141,34 +163,62 @@ export function TodoApp() {
     },
   ];
 
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const handleListItemClick = (event, index, item) => {
+    setSelectedIndex(index);
+    setWork(item);
+    console.log(event);
+  };
+
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
-        {/* <Grid container> */}
-        {/* <Grid></Grid> */}
-        <Grid>
-          <ArchivedTodos items={archived} getTodos={getTodos} />
-          <DragDropContext onDragEnd={onDragEnd}>
-            <Grid container justifyContent="space-around">
-              {todoBox.map((item) => {
+        <Grid container spacing={2} style={{ height: "100%" }}>
+          <Grid item md={2}>
+            <List>
+              {workspace.map((item, index) => {
                 return (
-                  <Grid item md={3} className="todolist_box">
-                    <Card>
-                      <TodoListBox
-                        items={item.items}
-                        title={item.title}
-                        id={item.id}
-                        getTodos={getTodos}
-                      />
-                    </Card>
-                  </Grid>
+                  <Item>
+                    <ListItem disablePadding>
+                      <ListItemButton
+                        selected={selectedIndex === index}
+                        onClick={(event) =>
+                          handleListItemClick(event, index, item.title)
+                        }
+                      >
+                        <ListItemText primary={item.title} />
+                        <ProjectDelete getTodos={getTodos} items={item} />
+                      </ListItemButton>
+                    </ListItem>
+                  </Item>
                 );
               })}
-            </Grid>
-          </DragDropContext>
+            </List>
+            <CreateProject getTodos={getTodos} />
+          </Grid>
+          <Grid item md={10}>
+            <DragDropContext onDragEnd={onDragEnd}>
+              <Grid container justifyContent="space-around">
+                {todoBox.map((item) => {
+                  return (
+                    <Grid item md={3} className="todolist_box">
+                      <Card>
+                        <TodoListBox
+                          items={item.items}
+                          title={item.title}
+                          id={item.id}
+                          getTodos={getTodos}
+                          work={work}
+                          archived={archived}
+                        />
+                      </Card>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </DragDropContext>
+          </Grid>
         </Grid>
-        {/* </Grid> */}
-      </ThemeProvider>
     </>
   );
 }

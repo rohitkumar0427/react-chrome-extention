@@ -38,9 +38,10 @@
 }
 
 .appbar{
-  background-color: rgb(71, 70, 70);
+  background-color: rgb(100, 99, 99);
   color: white;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .appbar_menuItem {

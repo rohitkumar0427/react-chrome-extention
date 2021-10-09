@@ -28,7 +28,7 @@ export function TodoListItem({ item }) {
 
   return (
     <>
-      <Paper elevation={12} variant="outlined" color="primary">
+      <Paper elevation={2} color="primary" className="todolist_itemPaper">
         <Typography
           draggable="true"
           onDragStart={drag}

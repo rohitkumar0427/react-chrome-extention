@@ -17,3 +17,13 @@
   text-align: center;
   font-family: "Birthstone", cursive;
 }
+.todolist_itemPaper {
+  margin: 0.5rem 0;
+}
+.todolist_itemPaper:hover {
+  background-color: rgb(25, 188, 194);
+}
+
+.soundIcon {
+  color: rgb(240, 236, 236);
+}

@@ -4,7 +4,6 @@ import {
   CardContent,
   Button,
   Modal,
-  Typography,
   TextField,
 } from "@mui/material";
 import { Droppable, Draggable } from "react-beautiful-dnd";
@@ -12,7 +11,7 @@ import { TodoListItem } from "./TodoListItem";
 import { useState } from "react";
 import { Box } from "@mui/system";
 import axios from "axios";
-import { GetTodos } from "../../Utils/GetTodos";
+import { ArchivedTodos } from "./ArchivedTodos";
 
 const style = {
   position: "absolute",
@@ -27,18 +26,21 @@ const style = {
   p: 4,
 };
 
-export function TodoListBox({ title, items, id, getTodos }) {
+export function TodoListBox({ title, items, id, getTodos, work, archived }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("false");
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  console.log(work);
+
   const handleChange = (e) => setText(e.target.value);
   const handleClick = (e) => {
     const payload = {
       title: text,
       status: "todo",
+      work: work,
     };
 
     axios
@@ -68,7 +70,7 @@ export function TodoListBox({ title, items, id, getTodos }) {
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                       >
-                        <TodoListItem key={item.id} item={item} /> 
+                        <TodoListItem key={item.id} item={item} />
                       </div>
                     )}
                   </Draggable>
@@ -92,6 +94,9 @@ export function TodoListBox({ title, items, id, getTodos }) {
                 </Box>
               </Modal>
             </>
+          )}
+          {id === "done" && (
+            <ArchivedTodos items={archived} getTodos={getTodos} />
           )}
         </CardContent>
       </Card>
