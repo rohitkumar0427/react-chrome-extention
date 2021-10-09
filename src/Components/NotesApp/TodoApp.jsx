@@ -15,6 +15,7 @@ import { TodoListBox } from "./TodoListBox";
 import { CreateProject } from "./CreateProject";
 import { DragDropContext } from "react-beautiful-dnd";
 import { ProjectDelete } from "./ProjectDelete";
+import { BorderBottom } from "@mui/icons-material";
 
 const Item = styled(Paper)(({ theme }) => ({
   //   ...theme.typography.body2,
@@ -23,7 +24,6 @@ const Item = styled(Paper)(({ theme }) => ({
   height: 60,
   lineHeight: "60px",
 }));
-
 
 export function TodoApp() {
   const [data, setData] = useState([]);
@@ -173,8 +173,13 @@ export function TodoApp() {
 
   return (
     <>
-        <Grid container spacing={2} style={{ height: "100%" }}>
-          <Grid item md={2}>
+      <Grid
+        container
+        spacing={2}
+        style={{ height: "100%", borderRight: "1px solid gray" }}
+      >
+        <Grid item md={3} style={{ height: "100%", border: "1px solid gray" }}>
+          <Paper>
             <List>
               {workspace.map((item, index) => {
                 return (
@@ -186,7 +191,10 @@ export function TodoApp() {
                           handleListItemClick(event, index, item.title)
                         }
                       >
-                        <ListItemText primary={item.title} />
+                        <ListItemText
+                          primary={item.title}
+                          className="todoapp_project"
+                        />
                         <ProjectDelete getTodos={getTodos} items={item} />
                       </ListItemButton>
                     </ListItem>
@@ -195,30 +203,31 @@ export function TodoApp() {
               })}
             </List>
             <CreateProject getTodos={getTodos} />
-          </Grid>
-          <Grid item md={10}>
-            <DragDropContext onDragEnd={onDragEnd}>
-              <Grid container justifyContent="space-around">
-                {todoBox.map((item) => {
-                  return (
-                    <Grid item md={3} className="todolist_box">
-                      <Card>
-                        <TodoListBox
-                          items={item.items}
-                          title={item.title}
-                          id={item.id}
-                          getTodos={getTodos}
-                          work={work}
-                          archived={archived}
-                        />
-                      </Card>
-                    </Grid>
-                  );
-                })}
-              </Grid>
-            </DragDropContext>
-          </Grid>
+          </Paper>
         </Grid>
+        <Grid item md={9}>
+          <DragDropContext onDragEnd={onDragEnd}>
+            <Grid container justifyContent="space-around">
+              {todoBox.map((item) => {
+                return (
+                  <Grid item md={3} className="todolist_box">
+                    <Card>
+                      <TodoListBox
+                        items={item.items}
+                        title={item.title}
+                        id={item.id}
+                        getTodos={getTodos}
+                        work={work}
+                        archived={archived}
+                      />
+                    </Card>
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </DragDropContext>
+        </Grid>
+      </Grid>
     </>
   );
 }

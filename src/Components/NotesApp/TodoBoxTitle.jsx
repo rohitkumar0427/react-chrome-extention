@@ -6,9 +6,9 @@ export function TodoBoxTitle({ title }) {
   return (
     <>
       <Paper elevation={6}>
-        <Typography className="todolist_title" variant="h4" align="center">
+        <h1 className="todolist_title" align="center">
           {title}
-        </Typography>
+        </h1>
       </Paper>
     </>
   );

@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Noto+Sans+Mono:wght@300&display=swap");
+
 .App {
   text-align: center;
+  /* font-family: 'Birthstone', cursive; */
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -37,8 +46,8 @@
   }
 }
 
-.appbar{
-  background-color: rgb(100, 99, 99);
+.appbar {
+  background-color: #1e1e1e;
   color: white;
   padding: 20px;
   margin-bottom: 20px;
@@ -60,6 +69,6 @@
 .appbar_activemenu {
   background-color: black;
   color: #fff;
-  padding:  10px 20px;
+  padding: 10px 20px;
   border-radius: 20px;
 }

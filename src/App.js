@@ -1,7 +1,8 @@
 import "./App.css";
-import { Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { TodoApp } from "./Components/NotesApp/TodoApp";
+import Bookmark from "./Components/bookmark/bookmark";
 import Sound from "react-sound";
 import SpeakerIcon from "@mui/icons-material/Speaker";
 import { useState } from "react";
@@ -80,12 +81,25 @@ function App() {
           </Grid>
         </Grid>
         <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => {
+              return <Redirect to="/NotesApp" />;
+            }}
+          />
           <Route path="/NotesApp">
             <TodoApp />
           </Route>
-          <Route path="/Bookmarks">Bro</Route>
-          <Route path="/Remainder">How</Route>
-          <Route path="/WebsiteBlocker">Are</Route>
+          <Route exact path="/Bookmarks">
+            <Bookmark />
+          </Route>
+          <Route exact path="/Remainder">
+            How
+          </Route>
+          <Route exact path="/WebsiteBlocker">
+            Are
+          </Route>
         </Switch>
         <Sound
           url="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"

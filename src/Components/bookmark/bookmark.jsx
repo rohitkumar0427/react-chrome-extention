@@ -1,5 +1,5 @@
 import styles from "./bookmark.module.css"
-import Button from '@material-ui/core/Button';
+import Button from "@mui/material/Button";
 import { useState,useEffect } from "react";
 import {GetData,SetData} from "../../Utils/localStorage"
 
