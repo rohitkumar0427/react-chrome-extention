@@ -1,19 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Gemunu+Libre:wght@500&family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Noto+Sans+Mono:wght@300&display=swap");
 
 .mainDiv{
     width: 80%;
     margin: auto;
     padding: 2%;
     border: 1px solid black;
-    background: #bdbdbd75;
+   background-color: #1e1e1e;
 }
 
 .dataDiv{
     width: 100%;
     border: 2px solid silver;
     border-radius: 10px;
-   background-color: #f8f5f5;
+   background-color:#ffff ;
   
 }
 .heading{
@@ -24,24 +24,45 @@
 }
 .data{
     width: 9%;
-    padding: 0.5;
+    padding: 0.9%;
     text-align: center;
-    margin-right: 0.2%;
+    margin-right: 0.5%;
     border: 1px solid black;
-    border-radius: 3px;
-    background: #bdbdbd75;
+    border-radius: 7px;
+    background: black;
+   text-transform: uppercase;
+
+   background: linear-gradient(145deg, black,#1e1e1e );
+   box-shadow:  5px 5px 10px #636363,
+                -5px -5px 10px #bbbbbb;
+  
+
+
     
 }
+
 .input{
     width: 80%;
     height: 23px;
     border-radius: 5px;
     background-color: #f8f5f5;
+   
 }
 
 .head{
-    font-family: 'Gemunu Libre', sans-serif;
-    text-decoration: underline;
+   
+   
+    color: #fff;
+    font-family: 'Ephesis', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin:5px 0px ;
+}
 
+.head1{
+    color:black;
+    text-decoration: underline;
+    text-align: left;
+    margin-left: 5px;
 
 }

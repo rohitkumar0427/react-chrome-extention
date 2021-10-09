@@ -212,32 +212,32 @@ function Bookmark(){
 
 
          <div className={styles.dataDiv}>
-         <h2 className={styles.head}>ENTERTINMENT</h2>
+         <h2 className={styles.head1}>ENTERTINMENT</h2>
              <div className={styles.heading}>
                 
-             { en.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"black",fontWeight:"300"}}>{e.st}</a></div>})
+             { en.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"#fff",fontWeight:"400"}}>{e.st}</a></div>})
 
             }
             </div>
 
-           <h2 className={styles.head}>SHOPPING</h2> 
+           <h2 className={styles.head1}>SHOPPING</h2> 
            <div className={styles.heading}>
                 
-                { shop.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"black",fontWeight:"300"}}>{e.st}</a></div>})
+                { shop.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"#fff",fontWeight:"400"}}>{e.st}</a></div>})
    
                }
                </div>
-               <h2 className={styles.head}>BUSINESS</h2> 
+               <h2 className={styles.head1}>BUSINESS</h2> 
            <div className={styles.heading}>
                 
-                { bus.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"black",fontWeight:"300"}}>{e.st}</a></div>})
+                { bus.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"#fff",fontWeight:"400"}}>{e.st}</a></div>})
    
                }
                </div>
-               <h2 className={styles.head}>STUDY</h2> 
+               <h2 className={styles.head1}>STUDY</h2> 
            <div className={styles.heading}>
                 
-                { study.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"black",fontWeight:"300"}}>{e.st}</a></div>})
+                { study.map((e)=>{return <div className={styles.data}><a href={`${e.alink}`} style={{textDecoration:"none",color:"#fff",fontWeight:"400"}}>{e.st}</a></div>})
    
                }
                </div>
