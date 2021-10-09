@@ -1,26 +1,53 @@
 import "./App.css";
 import { Switch, Route, NavLink } from "react-router-dom";
 import Grid from "@mui/material/Grid";
+import { TodoApp } from "./Components/NotesApp/TodoApp";
 
 function App() {
   return (
     <div className="App">
-      <Grid container>
+      <Grid container spacing={3} className="appbar">
         <Grid item>
-          <NavLink to="/NotesApp">NotesApp</NavLink>
+          <NavLink
+            className="appbar_menuItem"
+            activeClassName="appbar_activemenu"
+            to="/NotesApp"
+          >
+            NotesApp
+          </NavLink>
         </Grid>
         <Grid item>
-          <NavLink to="/WebsiteBlocker">WebsiteBlocker</NavLink>
+          <NavLink
+            className="appbar_menuItem"
+            activeClassName="appbar_activemenu"
+            to="/WebsiteBlocker"
+          >
+            WebsiteBlocker
+          </NavLink>
         </Grid>
         <Grid item>
-          <NavLink to="/Bookmarks">Bookmarks</NavLink>
+          <NavLink
+            className="appbar_menuItem"
+            activeClassName="appbar_activemenu"
+            to="/Bookmarks"
+          >
+            Bookmarks
+          </NavLink>
         </Grid>
         <Grid item>
-          <NavLink to="/Remainder">Remainder</NavLink>
+          <NavLink
+            className="appbar_menuItem"
+            activeClassName="appbar_activemenu"
+            to="/Remainder"
+          >
+            Remainder
+          </NavLink>
         </Grid>
       </Grid>
       <Switch>
-        <Route path="/NotesApp">HI</Route>
+        <Route path="/NotesApp">
+          <TodoApp />
+        </Route>
         <Route path="/Bookmarks">Bro</Route>
         <Route path="/Remainder">How</Route>
         <Route path="/WebsiteBlocker">Are</Route>
