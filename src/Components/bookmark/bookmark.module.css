@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Gemunu+Libre:wght@500&family=Lobster&display=swap');
+
+.mainDiv{
+    width: 80%;
+    margin: auto;
+    padding: 2%;
+    border: 1px solid black;
+    background: #bdbdbd75;
+}
+
+.dataDiv{
+    width: 100%;
+    border: 2px solid silver;
+    border-radius: 10px;
+   background-color: #f8f5f5;
+  
+}
+.heading{
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.data{
+    width: 9%;
+    padding: 0.5;
+    text-align: center;
+    margin-right: 0.2%;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: #bdbdbd75;
+    
+}
+.input{
+    width: 80%;
+    height: 23px;
+    border-radius: 5px;
+    background-color: #f8f5f5;
+}
+
+.head{
+    font-family: 'Gemunu Libre', sans-serif;
+    text-decoration: underline;
+
+
+}
