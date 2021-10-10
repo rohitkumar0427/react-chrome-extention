@@ -1,39 +1,44 @@
-import React from 'react';
+import axios from "axios";
+import React from "react";
 import { useState } from "react";
 
-export default function Popup() {
-    const[site, setSite] = useState("");
-    let webs = ["www.facebook.com","www.netflix.com"]
+export function Popup() {
+  const [site, setSite] = useState("");
+  let webs = ["www.facebook.com", "www.netflix.com"];
 
-    if(!localStorage.getItem('blocked')){
-       localStorage.setItem('blocked',JSON.stringify(webs));
-    }
+  if (!localStorage.getItem("blocked")) {
+    localStorage.setItem("blocked", JSON.stringify(webs));
+  }
 
-    let bSites = JSON.parse(localStorage.getItem("blocked"))
+  let bSites = JSON.parse(localStorage.getItem("blocked"));
 
-    const handleChange = (e) => {
-        setSite(e.target.value)
-    }
+  const handleChange = (e) => {
+    setSite(e.target.value);
+    console.log(e.target.value);
+  };
 
-    const handleClick = () =>{
-            bSites = [...bSites, site];
-            localStorage.setItem('blocked',JSON.stringify(bSites))
-    }
+  const handleClick = () => {
+    bSites = [...bSites, site];
+    const payload = {
+      title: site,
+    };
+    axios.post("http://localhost:3000/blockedSites", payload);
+    // localStorage.setItem('blocked',JSON.stringify(bSites))
+  };
 
-    return (
-        <div>
-    
-        <div>
+  return (
+    <div>
+      <div>
         <h1>Stop Procastinating</h1>
         <h3>Add Websites to Block</h3>
-        <input type="text" onChange = {handleChange}/>
-        <button onClick= {handleClick}>Add</button>
-        </div>
-        <div>
-            {bSites.map((e) => {
-                return <span>{e.splice(4,e.length-3)}</span>
-            })}
-        </div>
-        </div>
-    )
+        <input type="text" onChange={handleChange} />
+        <button onClick={handleClick}>Add</button>
+      </div>
+      <div>
+        {bSites.map((e) => {
+          // return <span>{e.splice(4,e.length-3)}</span>
+        })}
+      </div>
+    </div>
+  );
 }

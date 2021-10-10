@@ -106,5 +106,51 @@
       "title": "Others",
       "id": 3
     }
+  ],
+  "blockedSites": [
+    {
+      "id": 1,
+      "title": "www.facebook.com"
+    },
+    {
+      "title": "sdhfgmfg",
+      "id": 2
+    },
+    {
+      "title": "sdhfgmfg",
+      "id": 3
+    },
+    {
+      "title": "sdhfgmfg",
+      "id": 4
+    },
+    {
+      "title": "www.youtube.com",
+      "id": 5
+    },
+    {
+      "title": "www.instagram.com",
+      "id": 6
+    },
+    {
+      "title": "www.instagram.com",
+      "id": 7
+    },
+    {
+      "title": "www.instagram.com",
+      "id": 8
+    },
+    {
+      "title": "www.instagram.com",
+      "id": 9
+    },
+    {
+      "title": "Inssdnivbnsio;",
+      "id": 10
+    },
+    {
+      "title": "www.primevideo.com",
+      "id": 11
+    }
   ]
 }

@@ -11,6 +11,7 @@ import { GrVolume } from "react-icons/gr";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { IconContext } from "react-icons/lib";
 import { Reminder } from "./Components/Reminder/Reminder";
+import { Popup } from "./Components/blocker/Popup";
 
 const darkTheme = createTheme({ palette: { mode: "dark" } });
 const lightTheme = createTheme({ palette: { mode: "light" } });
@@ -95,9 +96,11 @@ function App() {
           </Route>
 
           <Route exact path="/Remainder">
-            <Reminder/>
+            <Reminder />
           </Route>
-          <Route exact path="/WebsiteBlocker"></Route>
+          <Route exact path="/WebsiteBlocker">
+            <Popup />
+          </Route>
           <Route path="" exact>
             <TodoApp />
           </Route>

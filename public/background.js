@@ -252,29 +252,19 @@ const generateHTML = (pageName) => {
    `;
 };
 
-// let webs = ["www.facebook.com", "www.netflix.com", "www.youtube.com"];
+let webs = ["www.facebook.com", "www.netflix.com", "www.youtube.com"];
 
-// if (!JSON.parse(localStorage.getItem("blocked")))
-//   localStorage.setItem("blocked", JSON.stringify(webs));
+if (!JSON.parse(localStorage.getItem("blocked")))
+  localStorage.setItem("blocked", JSON.stringify(webs));
 
-// var blWebs = JSON.parse(localStorage.getItem("blocked"));
-// console.log(blWebs);
-
-var blWebs = [];
-
-fetch("http://localhost:3000/blockedSites")
-  .then((response) => response.json())
-  .then((data) => (blWebs = data));
-
+var blWebs = JSON.parse(localStorage.getItem("blocked"));
 console.log(blWebs);
 
-setTimeout(() => {
-  for (let i = 0; i < blWebs.length; i++) {
-    if (window.location.hostname === blWebs[i].title) {
-      document.head.innerHTML = generateSTYLES();
-      document.body.innerHTML = generateHTML(blWebs[i].title);
-    }
-
-    // console.log("this is loaction:", window.location);
+for (let i = 0; i < blWebs.length; i++) {
+  if (window.location.hostname === blWebs[i]) {
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML(blWebs[i]);
   }
-}, 500);
+
+  // console.log("this is loaction:", window.location);
+}
