@@ -17,7 +17,7 @@ const lightTheme = createTheme({ palette: { mode: "light" } });
 function App() {
   const [play, setPlay] = useState(false);
 
-  console.log(play);
+  console.log(window.location.hostname);
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -88,17 +88,17 @@ function App() {
               return <Redirect to="/NotesApp" />;
             }}
           />
-          <Route path="/NotesApp">
-            <TodoApp />
-          </Route>
+
           <Route exact path="/Bookmarks">
             <Bookmark />
           </Route>
+
           <Route exact path="/Remainder">
             How
           </Route>
-          <Route exact path="/WebsiteBlocker">
-            Are
+          <Route exact path="/WebsiteBlocker"></Route>
+          <Route path="" exact>
+            <TodoApp />
           </Route>
         </Switch>
         <Sound

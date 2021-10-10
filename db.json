@@ -33,24 +33,6 @@
       "id": 7
     },
     {
-      "title": "Learn HTML",
-      "status": "doing",
-      "work": "",
-      "id": 8
-    },
-    {
-      "title": "Learn CSS",
-      "status": "archived",
-      "work": "",
-      "id": 9
-    },
-    {
-      "title": "Learn JS",
-      "status": "archived",
-      "work": "",
-      "id": 10
-    },
-    {
       "title": "Gardening",
       "status": "doing",
       "work": "Personal",
@@ -103,6 +85,12 @@
       "status": "archived",
       "work": "svsad",
       "id": 19
+    },
+    {
+      "title": "svsdbs",
+      "status": "archived",
+      "work": "dbvds",
+      "id": 20
     }
   ],
   "workspace": [

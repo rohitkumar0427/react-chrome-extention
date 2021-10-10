@@ -2,23 +2,16 @@
   "name": "Productivity Extension",
   "description": "Build an Extension!",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "icons": {
     "16": "darwinFav16.ico",
     "48": "darwinFav48.ico",
     "128": "darwinFav128.ico"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["Content.js"]
-    }
-  ],
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "browser_action": {
-    "default_popup": "index.html"
-  },
-  "permissions": ["webRequest", "*://*.google.com/"]
+  "browserAction": {
+    "popup": "popup.html"
+  }
 }
