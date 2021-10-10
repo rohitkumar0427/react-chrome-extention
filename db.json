@@ -33,24 +33,6 @@
       "id": 7
     },
     {
-      "title": "Gardening",
-      "status": "archived",
-      "work": "Personal",
-      "id": 11
-    },
-    {
-      "title": "Cleaning",
-      "status": "doing",
-      "work": "Personal",
-      "id": 12
-    },
-    {
-      "title": "Work on youtube video",
-      "status": "doing",
-      "work": "Personal",
-      "id": 13
-    },
-    {
       "title": "Meet Steve",
       "status": "doing",
       "work": "Others",
@@ -91,74 +73,36 @@
       "status": "archived",
       "work": "dbvds",
       "id": 20
+    },
+    {
+      "title": "asvcadsv",
+      "status": "doing",
+      "work": "",
+      "id": 21
+    },
+    {
+      "title": "dvsdvsv",
+      "status": "todo",
+      "work": "",
+      "id": 22
+    },
+    {
+      "title": "Add",
+      "status": "archived",
+      "work": false,
+      "id": 23
     }
   ],
   "workspace": [
     {
       "title": "Personal",
       "id": 17
-    },
-    {
-      "title": "Office",
-      "id": 2
-    },
-    {
-      "title": "Others",
-      "id": 3
     }
   ],
   "blockedSites": [
     {
       "id": 1,
       "title": "www.facebook.com"
-    },
-    {
-      "title": "sdhfgmfg",
-      "id": 2
-    },
-    {
-      "title": "sdhfgmfg",
-      "id": 3
-    },
-    {
-      "title": "sdhfgmfg",
-      "id": 4
-    },
-    {
-      "title": "www.youtube.com",
-      "id": 5
-    },
-    {
-      "title": "www.instagram.com",
-      "id": 6
-    },
-    {
-      "title": "www.instagram.com",
-      "id": 7
-    },
-    {
-      "title": "www.instagram.com",
-      "id": 8
-    },
-    {
-      "title": "www.instagram.com",
-      "id": 9
-    },
-    {
-      "title": "Inssdnivbnsio;",
-      "id": 10
-    },
-    {
-      "title": "www.primevideo.com",
-      "id": 11
-    },
-    {
-      "title": "www.google.com",
-      "id": 12
-    },
-    {
-      "title": "www.handleclick.com",
-      "id": 13
     }
   ]
 }

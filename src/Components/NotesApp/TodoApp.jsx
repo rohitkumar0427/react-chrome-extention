@@ -178,7 +178,14 @@ export function TodoApp() {
         spacing={2}
         style={{ height: "100%", borderRight: "1px solid gray" }}
       >
-        <Grid item md={2} style={{ height: "100%", border: "1px solid gray" }}>
+        <Grid
+          item
+          md={12}
+          ls={12}
+          xl={12}
+          sm={12}
+          style={{ height: "100%", border: "1px solid gray" }}
+        >
           <Paper>
             <List>
               {workspace.map((item, index) => {
@@ -205,12 +212,19 @@ export function TodoApp() {
             <CreateProject getTodos={getTodos} />
           </Paper>
         </Grid>
-        <Grid item md={10}>
+        <Grid item md={12} ls={12} xl={12} sm={12}>
           <DragDropContext onDragEnd={onDragEnd}>
-            <Grid container justifyContent="space-around">
+            <Grid container justifyContent="space-around" spacing={1}>
               {todoBox.map((item) => {
                 return (
-                  <Grid item md={3} className="todolist_box">
+                  <Grid
+                    item
+                    md={4}
+                    ls={4}
+                    xl={4}
+                    sm={4}
+                    className="todolist_box"
+                  >
                     <Card>
                       <TodoListBox
                         items={item.items}

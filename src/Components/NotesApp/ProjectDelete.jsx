@@ -16,7 +16,7 @@ const style = {
   //width: 400,
   bgcolor: "background.paper",
   border: "2px solid #000",
-  // color: "#fff",
+  color: "#fff",
   boxShadow: 24,
   p: 4,
 };
@@ -43,7 +43,7 @@ export function ProjectDelete({ items, getTodos }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography>
+          <Typography styles={{color: "white"}}>
             Are you sure you want to delete "{items.title}" todolists?
           </Typography>
           <Grid container justifyContent="flex-end">

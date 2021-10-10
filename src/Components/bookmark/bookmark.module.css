@@ -7,6 +7,7 @@
     padding: 2%;
     border: 1px solid black;
    background-color: #1e1e1e;
+   /* width:fit-content */
 }
 
 .dataDiv{
@@ -23,7 +24,7 @@
     flex-wrap: wrap;
 }
 .data{
-    width: 9%;
+    width: max-content;
     padding: 0.9%;
     text-align: center;
     margin-right: 0.5%;

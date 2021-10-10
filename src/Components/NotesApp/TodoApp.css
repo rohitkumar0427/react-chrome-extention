@@ -1,7 +1,7 @@
 /* .todolist_box {
   /* width: 100%; 
 } */
-@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Ephesis&family=Noto+Sans+Mono:wght@300&family=Roboto+Slab:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&family=Ephesis&family=Noto+Sans+Mono:wght@300&family=Roboto+Slab:wght@300&display=swap");
 
 .todolist_item,
 .todolist_title {
@@ -17,7 +17,7 @@
   background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
-  font-family: 'Birthstone', cursive;
+  font-family: "Birthstone", cursive;
 }
 .todolist_itemPaper {
   margin: 0.5rem 0;
@@ -27,9 +27,13 @@
 }
 
 .todoapp_project {
-    font-family: 'Ephesis', cursive;
+  font-family: "Ephesis", cursive;
 }
 
 .soundIcon {
   color: rgb(240, 236, 236);
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  right: 10px;
 }
