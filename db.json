@@ -34,19 +34,19 @@
     },
     {
       "title": "Gardening",
-      "status": "doing",
+      "status": "archived",
       "work": "Personal",
       "id": 11
     },
     {
       "title": "Cleaning",
-      "status": "done",
+      "status": "doing",
       "work": "Personal",
       "id": 12
     },
     {
       "title": "Work on youtube video",
-      "status": "todo",
+      "status": "doing",
       "work": "Personal",
       "id": 13
     },

@@ -252,7 +252,7 @@ const generateHTML = (pageName) => {
    `;
 };
 
-let webs = ["www.facebook.com", "www.youtube.com", "www.netflix.com"];
+let webs = ["www.facebook.com", "www.netflix.com", "www.youtube.com"];
 
 localStorage.setItem("blocked", JSON.stringify(webs));
 
