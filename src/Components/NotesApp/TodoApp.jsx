@@ -178,7 +178,7 @@ export function TodoApp() {
         spacing={2}
         style={{ height: "100%", borderRight: "1px solid gray" }}
       >
-        <Grid item md={3} style={{ height: "100%", border: "1px solid gray" }}>
+        <Grid item md={2} style={{ height: "100%", border: "1px solid gray" }}>
           <Paper>
             <List>
               {workspace.map((item, index) => {
@@ -205,7 +205,7 @@ export function TodoApp() {
             <CreateProject getTodos={getTodos} />
           </Paper>
         </Grid>
-        <Grid item md={9}>
+        <Grid item md={10}>
           <DragDropContext onDragEnd={onDragEnd}>
             <Grid container justifyContent="space-around">
               {todoBox.map((item) => {
