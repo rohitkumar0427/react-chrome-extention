@@ -10,6 +10,7 @@ import { GrVolumeMute } from "react-icons/gr";
 import { GrVolume } from "react-icons/gr";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { IconContext } from "react-icons/lib";
+import { Reminder } from "./Components/Reminder/Reminder";
 
 const darkTheme = createTheme({ palette: { mode: "dark" } });
 const lightTheme = createTheme({ palette: { mode: "light" } });
@@ -56,7 +57,7 @@ function App() {
               activeClassName="appbar_activemenu"
               to="/Remainder"
             >
-              Remainder
+              Reminder
             </NavLink>
           </Grid>
           <Grid item justifySelf="right">
@@ -94,7 +95,7 @@ function App() {
           </Route>
 
           <Route exact path="/Remainder">
-            How
+            <Reminder/>
           </Route>
           <Route exact path="/WebsiteBlocker"></Route>
           <Route path="" exact>
